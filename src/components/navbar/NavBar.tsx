@@ -10,28 +10,15 @@ import HoverCard from '../animations/hover-card';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { slugify } from '@/lib/slugify';
+import { scrollToSection } from '@/lib/scrollTo';
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navLinks = ['Home', 'Features', 'Pricing', 'Contact'];
+  const navLinks = ['Home', 'Features', 'Pricing', 'Agent'];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    if (targetId === 'home') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
-    // Close mobile menu after navigation
+    scrollToSection(targetId);
     setIsMobileMenuOpen(false);
   };
 

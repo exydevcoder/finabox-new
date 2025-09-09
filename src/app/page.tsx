@@ -19,7 +19,7 @@ export default function Home() {
       <div className="">
         <ChooseYourStateSection />
       </div>
-      <div id="contact">
+      <div id="contact" className="scroll-mt-32 sm:scroll-mt-5">
         <ContactSection />
       </div>
     </>

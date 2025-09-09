@@ -16,6 +16,7 @@ import PlayStoreIcon from '@/assets/icons/play-store.svg';
 import AppleStoreIcon from '@/assets/icons/apple-store.svg';
 import StaggeredFadeIn from '../animations/StaggeredFadeIn';
 import { scrollToTop } from '../scrollToTop';
+import { scrollToSection } from '@/lib/scrollTo';
 
 export default function Footer() {
   const socialIcons = [
@@ -30,20 +31,7 @@ export default function Footer() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    if (targetId === 'home') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
+    scrollToSection(targetId);
   };
 
   return (

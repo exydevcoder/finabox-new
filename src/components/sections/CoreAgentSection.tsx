@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image';
 import ambassadorsIcon from '../../assets/core-agent/ambassadors.svg';
 import customersIcon from '../../assets/core-agent/customers.svg';
@@ -16,6 +18,7 @@ import HoverCard from '../animations/hover-card';
 import StaggeredFadeIn from '../animations/StaggeredFadeIn';
 import FadeIn from '../animations/fade-in';
 import { Button } from '../ui/button';
+import { scrollToSection } from '@/lib/scrollTo';
 
 export default function CoreAgentSection() {
   const CoreRespData = [
@@ -157,7 +160,11 @@ export default function CoreAgentSection() {
           </FadeIn>
           <FadeIn direction="left" delay={0.5} duration={0.6} className="w-full sm:w-auto">
             <HoverCard hoverScale={1.03} hoverElevation>
-              <Button variant="customWithGradient" className="!w-full sm:!w-[156px] !h-[48px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]">
+              <Button
+                variant="customWithGradient"
+                className="!w-full sm:!w-[156px] !h-[48px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]"
+                onClick={() => scrollToSection('contact')}
+              >
                 Apply
               </Button>
             </HoverCard>

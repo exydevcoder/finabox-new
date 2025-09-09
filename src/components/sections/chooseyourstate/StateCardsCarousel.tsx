@@ -14,6 +14,7 @@ import FadeIn from '@/components/animations/fade-in';
 import HoverCard from '@/components/animations/hover-card';
 import { stateData } from './mockData';
 import StaggeredFadeIn from '@/components/animations/StaggeredFadeIn';
+import { BOOK_MEETING_URL } from '@/utils/globalUrl';
 
 export default function StateCardsCarousel() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -87,27 +88,38 @@ export default function StateCardsCarousel() {
                 </StaggeredFadeIn>
 
                 <FadeIn direction="up" delay={0.5 + index * 0.1} duration={0.6} className="w-full flex gap-3">
-                  <HoverCard hoverScale={1.05} hoverElevation className="w-full">
+                  <HoverCard hoverScale={1.02} hoverElevation className="w-full">
                     <Button
-                      variant={state.status === 'Full' ? 'default' : 'customWithGradient'}
+                      variant={state.status === 'Full' ? 'disableStyle' : 'customWithGradient'}
                       disabled={state.status === 'Full'}
-                      className={`text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)] hover:scale-105 active:scale-95 *:
-                      ${state.status === 'Full' && 'bg-zinc-500 text-white'}`}
+                      className="text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]"
                     >
                       Join Now
                     </Button>
                   </HoverCard>
 
-                  <HoverCard hoverScale={1.05} hoverElevation className="w-full">
-                    <Button
-                      variant={state.status === 'Full' ? 'default' : 'customWithGradient'}
-                      disabled={state.status === 'Full'}
-                      className={`bg-white text-center !w-full !h-[48px] !text-sm text-black rounded-[10px] gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 
-                     ${state.status === 'Full' && 'bg-white'}`}
-                    >
-                      Book a <br />
-                      Meeting
-                    </Button>
+                  <HoverCard hoverScale={1.02} hoverElevation className="w-full">
+                    {state.status === 'Full' ? (
+                      <Button
+                        variant={state.status === 'Full' ? 'disableStyle' : 'customWithGradient'}
+                        disabled={state.status === 'Full'}
+                        className="bg-white text-center !w-full !h-[48px] !text-sm text-black rounded-[10px] gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] "
+                      >
+                        Book a <br />
+                        Meeting
+                      </Button>
+                    ) : (
+                      <a href={BOOK_MEETING_URL} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant={state.status === 'Full' ? 'disableStyle' : 'customWithGradient'}
+                          disabled={state.status === 'Full'}
+                          className="bg-white text-center !w-full !h-[48px] !text-sm text-black rounded-[10px] gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] "
+                        >
+                          Book a <br />
+                          Meeting
+                        </Button>
+                      </a>
+                    )}
                   </HoverCard>
                 </FadeIn>
               </HoverCard>

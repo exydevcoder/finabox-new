@@ -17,7 +17,9 @@ const buttonVariants = cva(
         ghost: 'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 cursor-pointer',
         link: 'text-primary underline-offset-4 hover:underline',
         customWithGradient:
-          'bg-gradient-to-r from-[#5021FF] to-[#8921FF] cursor-pointer rounded-full w-[310px] sm:w-[160px] md:w-[210px] lg:w-[210px] 2xl:w-[210px] !h-[50px] sm:h-[48px] md:h-[50px] lg:h-[50px] 2xl:h-[56px] text-[16px] leading-[100%] hover:from-[#5a2aff] hover:to-[#9321FF] transition-all duration-300 font-medium'
+          'bg-gradient-to-r from-[#5021FF] to-[#8921FF] cursor-pointer rounded-full w-[310px] sm:w-[160px] md:w-[210px] lg:w-[210px] 2xl:w-[210px] !h-[50px] sm:h-[48px] md:h-[50px] lg:h-[50px] 2xl:h-[56px] text-[16px] leading-[100%] hover:from-[#5a2aff] hover:to-[#9321FF] transition-all duration-300 font-medium',
+        disableStyle:
+          'bg-zinc-500 text-white rounded-full w-[310px] sm:w-[160px] md:w-[210px] lg:w-[210px] 2xl:w-[210px] !h-[50px] sm:h-[48px] md:h-[50px] lg:h-[50px] 2xl:h-[56px] text-[16px] leading-[100%] transition-all duration-300 font-medium'
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',

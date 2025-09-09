@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import HoverCard from '@/components/animations/hover-card';
 import { Button } from '@/components/ui/button';
 import TopAgentSection from './TopAgentSection';
+import { BOOK_MEETING_URL } from '@/utils/globalUrl';
 
 export default function HeroSection() {
   return (
@@ -38,9 +39,11 @@ export default function HeroSection() {
                 </Button>
               </HoverCard>
               <HoverCard hoverScale={1.03} hoverElevation>
-                <Button variant="customWithGradient" className="bg-white text-black gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                  Book a Meeting
-                </Button>
+                <a href={BOOK_MEETING_URL} target="_blank" rel="noopener noreferrer">
+                  <Button variant="customWithGradient" className="bg-white text-black gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    Book a Meeting
+                  </Button>
+                </a>
               </HoverCard>
             </FadeIn>
           </div>

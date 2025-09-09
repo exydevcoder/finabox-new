@@ -1,0 +1,1 @@
+export const BOOK_MEETING_URL = 'https://calendly.com/ihierimichael/meeting-with-smes';
