@@ -15,6 +15,7 @@ import HoverCard from '@/components/animations/hover-card';
 import { stateData } from './mockData';
 import StaggeredFadeIn from '@/components/animations/StaggeredFadeIn';
 import { BOOK_MEETING_URL } from '@/utils/globalUrl';
+import { scrollToSection } from '@/lib/scrollTo';
 
 export default function StateCardsCarousel() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -89,13 +90,24 @@ export default function StateCardsCarousel() {
 
                 <FadeIn direction="up" delay={0.5 + index * 0.1} duration={0.6} className="w-full flex gap-3">
                   <HoverCard hoverScale={1.02} hoverElevation className="w-full">
-                    <Button
-                      variant={state.status === 'Full' ? 'disableStyle' : 'customWithGradient'}
-                      disabled={state.status === 'Full'}
-                      className="text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]"
-                    >
-                      Join Now
-                    </Button>
+                    {state.status === 'Full' ? (
+                      <Button
+                        variant={state.status === 'Full' ? 'disableStyle' : 'customWithGradient'}
+                        disabled={state.status === 'Full'}
+                        className="text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]"
+                      >
+                        Join Now
+                      </Button>
+                    ) : (
+                      <Button
+                        variant={state.status === 'Full' ? 'disableStyle' : 'customWithGradient'}
+                        disabled={state.status === 'Full'}
+                        className="text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]"
+                        onClick={() => scrollToSection('contact')}
+                      >
+                        Join Now
+                      </Button>
+                    )}
                   </HoverCard>
 
                   <HoverCard hoverScale={1.02} hoverElevation className="w-full">

@@ -11,6 +11,7 @@ import HoverCard from '@/components/animations/hover-card';
 import { Button } from '@/components/ui/button';
 import TopAgentSection from './TopAgentSection';
 import { BOOK_MEETING_URL } from '@/utils/globalUrl';
+import { scrollToSection } from '@/lib/scrollTo';
 
 export default function HeroSection() {
   return (
@@ -34,7 +35,7 @@ export default function HeroSection() {
             </FadeIn>
             <FadeIn direction="left" delay={0.5} duration={0.6} className="flex flex-col sm:flex-row gap-3">
               <HoverCard hoverScale={1.03} hoverElevation>
-                <Button variant="customWithGradient" className="gap-3 transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]">
+                <Button variant="customWithGradient" className="gap-3 transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]" onClick={() => scrollToSection('contact')}>
                   Join Now
                 </Button>
               </HoverCard>
