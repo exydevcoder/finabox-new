@@ -131,7 +131,7 @@ export default function CoreAgentSection() {
                   </HoverCard>
                   <h3 className="text-white text-base font-medium leading-[24px]">{item.title}</h3>
                 </div>
-                <p className="text-white/50 w-[296px] sm:w-full text-sm font-normal leading-[20px]">{item.desc}</p>
+                <p className="text-white/50 w-full xs:w-[296px] sm:w-full text-sm font-normal leading-[20px]">{item.desc}</p>
               </HoverCard>
             ))}
           </StaggeredFadeIn>
@@ -140,7 +140,7 @@ export default function CoreAgentSection() {
         <HoverCard
           hoverScale={1.008}
           hoverElevation={true}
-          className="p-8 flex flex-col sm:flex-row items-center justify-between bg-gradient-to-b from-white/5 to-white/0 rounded-2xl shadow-[inset_0px_1px_0px_1px_rgba(255,255,255,0.03)] backdrop-blur-sm border-t border-l border-r border-indigo-600 gap-6 sm:gap-0"
+          className="p-6 xs:p-8 flex flex-col sm:flex-row items-center justify-between bg-gradient-to-b from-white/5 to-white/0 rounded-2xl shadow-[inset_0px_1px_0px_1px_rgba(255,255,255,0.03)] backdrop-blur-sm border-t border-l border-r border-indigo-600 gap-6 sm:gap-0"
         >
           <FadeIn direction="left" delay={0.4} duration={0.7} className="flex flex-col sm:flex-row gap-6 items-center sm:items-start w-full sm:w-auto">
             <div className="flex-shrink-0">
@@ -148,9 +148,9 @@ export default function CoreAgentSection() {
                 <Image width={48} height={48} src={governanceIcon} alt="governanceIcon" className="transition-transform duration-500" />
               </HoverCard>
             </div>
-            <div className="flex flex-col gap-2 w-full lg:w-[700px]">
+            <div className="flex flex-col items-center sm:items-start gap-2 w-full lg:w-[700px]">
               <h3 className="text-white text-center sm:text-left text-xl sm:text-2xl font-semibold leading-7 sm:leading-8">Governance</h3>
-              <p className="w-[326px] sm:w-full text-white/80 text-center sm:text-left text-sm sm:text-base font-normal leading-6">
+              <p className="w-full xs:w-[326px] sm:w-full text-white/80 text-center sm:text-left text-sm sm:text-base font-normal leading-6">
                 Agents follow a strict code of conduct, pay ₦20,000 annual license fee, and must renew annually based on compliance.
               </p>
             </div>
