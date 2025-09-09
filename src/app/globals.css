@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -52,7 +52,7 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(0 0 0);
-  --foreground: #FFFFFF;
+  --foreground: #ffffff;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -118,7 +118,6 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -128,26 +127,24 @@
   }
 }
 
-
-
-.container{
-  @apply w-[100%] lg:w-[85%] xl:w-[90%] max-w-[1408px]
+.container {
+  @apply w-[100%] lg:w-[85%] xl:w-[90%] max-w-[1408px];
 }
 
 .gradientTextColor {
-  @apply bg-gradient-to-r from-[#8921FF] to-[#5021FF] bg-clip-text text-transparent
+  @apply bg-gradient-to-r from-[#8921FF] to-[#5021FF] bg-clip-text text-transparent;
 }
 
-.titleStyle{
-  @apply font-semibold text-[30px] xs:text-[40px] sm:text-[50px] md:text-[50px] lg:text-[60px] xl:text-[60px] leading-[35px] xs:leading-[42px] sm:leading-[52px] lg:leading-[60px] xl:leading-[60px]
+.titleStyle {
+  @apply font-semibold text-[30px] xs:text-[40px] sm:text-[50px] md:text-[50px] lg:text-[60px] xl:text-[60px] leading-[35px] xs:leading-[42px] sm:leading-[52px] lg:leading-[60px] xl:leading-[60px];
 }
 
 .gradientBgColor {
-  @apply bg-gradient-to-r from-[#5021FF] to-[#8921FF] hover:from-[#5a2aff] hover:to-[#9321FF] transition-all duration-300
+  @apply bg-gradient-to-r from-[#5021FF] to-[#8921FF] hover:from-[#5a2aff] hover:to-[#9321FF] transition-all duration-300;
 }
 
 .footerBgImg {
-  background-image: url("../assets/footer.png");
+  background-image: url('../assets/footer.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -156,5 +153,5 @@
 }
 
 .swiper-slide {
-  @apply !w-[250px]
+  @apply !w-[250px];
 }

@@ -89,8 +89,10 @@ export default function StateCardsCarousel() {
                 <FadeIn direction="up" delay={0.5 + index * 0.1} duration={0.6} className="w-full flex gap-3">
                   <HoverCard hoverScale={1.05} hoverElevation className="w-full">
                     <Button
-                      variant="customWithGradient"
-                      className="text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)] hover:scale-105 active:scale-95"
+                      variant={state.status === 'Full' ? 'default' : 'customWithGradient'}
+                      disabled={state.status === 'Full'}
+                      className={`text-center gap-3 !w-full !h-[48px] !text-sm rounded-[10px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)] hover:scale-105 active:scale-95 *:
+                      ${state.status === 'Full' && 'bg-zinc-500 text-white'}`}
                     >
                       Join Now
                     </Button>
@@ -98,8 +100,10 @@ export default function StateCardsCarousel() {
 
                   <HoverCard hoverScale={1.05} hoverElevation className="w-full">
                     <Button
-                      variant="customWithGradient"
-                      className="bg-white text-center !w-full !h-[48px] !text-sm text-black rounded-[10px] gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95"
+                      variant={state.status === 'Full' ? 'default' : 'customWithGradient'}
+                      disabled={state.status === 'Full'}
+                      className={`bg-white text-center !w-full !h-[48px] !text-sm text-black rounded-[10px] gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 
+                     ${state.status === 'Full' && 'bg-white'}`}
                     >
                       Book a <br />
                       Meeting

@@ -6,7 +6,7 @@ import StateCardsCarousel from './StateCardsCarousel';
 
 export default function ChooseYourStateSection() {
   return (
-    <section className="px-8 w-full flex items-center justify-center">
+    <section className="px-8 w-full flex items-center justify-center py-[96px]">
       <div className="container flex flex-col p-0 sm:p-6 gap-8">
         <FadeIn direction="up" delay={0.2} duration={0.8} className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex flex-col text-center md:text-left gap-2">
