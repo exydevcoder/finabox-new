@@ -68,7 +68,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="px-8 w-full flex items-center justify-center py-[96px]">
+    <section className="px-5 sm:px-8 w-full flex items-center justify-center pb-0 sm:pb-[96px] pt-0 sm:pt-[96px]">
       <div className="container">
         <div className="max-w-[592px] mx-auto">
           <div className="flex flex-col items-center justify-center gap-6 w-full">
@@ -79,11 +79,11 @@ export default function ContactSection() {
               <h1 className="text-center text-white text-4xl font-semibold leading-10">Secure Your Slot Today</h1>
             </FadeIn>
             <FadeIn direction="up" delay={0.4} distance={40} duration={0.8}>
-              <p className="w-80 text-center text-white/70 text-base font-normal leading-6">Fill a quick form to apply as a Finabox Agent in your state.</p>
+              <p className="w-full xs:w-80 text-center text-white/70 text-base font-normal leading-6">Fill a quick form to apply as a Finabox Agent in your state.</p>
             </FadeIn>
           </div>
 
-          <div className="max-w-[448px] mx-auto mt-8 px-10 py-8 bg-gradient-to-b from-white/5 to-white/0 rounded-2xl shadow-[inset_0px_1px_0px_1px_rgba(255,255,255,0.03)] backdrop-blur-sm border-t border-l border-r border-indigo-600">
+          <div className="max-w-[448px] mx-auto mt-8 px-5 xs:px-10 py-8 bg-gradient-to-b from-white/5 to-white/0 rounded-2xl shadow-[inset_0px_1px_0px_1px_rgba(255,255,255,0.03)] backdrop-blur-sm border-t border-l border-r border-indigo-600">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FadeIn direction="up" delay={0.4} distance={40} duration={0.8}>

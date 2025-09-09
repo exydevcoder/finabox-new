@@ -8,7 +8,7 @@ import { Badge } from '../ui/badge';
 
 export default function FinaboxAgentSection() {
   return (
-    <section className="px-8 w-full flex items-center justify-center">
+    <section className="px-5 sm:px-8 w-full flex items-center justify-center">
       <div className="container flex flex-col md:flex-row items-start sm:items-center justify-between gap-10">
         <div className="flex flex-col items-start gap-6 max-w-full sm:max-w-[785px]">
           <FadeIn direction="up" delay={0.3} distance={40} duration={0.8}>
@@ -22,7 +22,7 @@ export default function FinaboxAgentSection() {
             </p>
           </FadeIn>
 
-          <FadeIn direction="left" delay={0.5} duration={0.6} className="w-full flex gap-3">
+          <FadeIn direction="left" delay={0.5} duration={0.6} className="w-full flex gap-1.5 xs:gap-3">
             <FadeIn direction="up" delay={0.2} distance={40} duration={0.8}>
               <Badge variant="customBadgeStyle">Trusted Locally</Badge>
             </FadeIn>

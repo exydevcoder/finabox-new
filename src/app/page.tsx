@@ -19,7 +19,7 @@ export default function Home() {
       <div className="">
         <ChooseYourStateSection />
       </div>
-      <div id="contact" className="pt-10">
+      <div id="contact">
         <ContactSection />
       </div>
     </>

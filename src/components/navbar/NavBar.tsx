@@ -13,7 +13,7 @@ import { slugify } from '@/lib/slugify';
 
 export default function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navLinks = ['Home', 'Features', 'Pricing', 'Agent'];
+  const navLinks = ['Home', 'Features', 'Pricing', 'Contact'];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();

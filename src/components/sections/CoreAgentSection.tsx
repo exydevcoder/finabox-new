@@ -70,7 +70,7 @@ export default function CoreAgentSection() {
   ];
 
   return (
-    <section className="px-8 w-full flex items-center justify-center pb-[40px] sm:pb-[80px]">
+    <section className="px-5 sm:px-8 w-full flex items-center justify-center pb-[40px] sm:pb-[80px]">
       <div className="container flex flex-col gap-10">
         <div className="w-full flex flex-col gap-3 px-0 sm:px-6 pt-24">
           <FadeIn direction="up" delay={0.3} distance={40} duration={0.8}>
@@ -79,7 +79,7 @@ export default function CoreAgentSection() {
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.4} distance={40} duration={0.8}>
-            <p className="w-[344px] sm:w-full text-base sm:text-[22px] text-[#FFFFFF80] font-normal">Operate with clarity, integrity, and measurable impact across your state.</p>
+            <p className="w-full xs:w-[344px] sm:w-full text-base sm:text-[22px] text-[#FFFFFF80] font-normal">Operate with clarity, integrity, and measurable impact across your state.</p>
           </FadeIn>
           <StaggeredFadeIn direction="up" staggerDelay={0.15} initialDelay={0.4} duration={0.7} distance={30} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-7">
             {CoreRespData.map((item, i) => (
@@ -108,7 +108,7 @@ export default function CoreAgentSection() {
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.4} distance={40} duration={0.8}>
-            <p className="w-[344px] sm:w-full text-base sm:text-[22px] text-[#FFFFFF80] font-normal">Designed to reward performance and long-term impact.</p>
+            <p className="w-full xs:w-[344px] sm:w-full text-base sm:text-[22px] text-[#FFFFFF80] font-normal">Designed to reward performance and long-term impact.</p>
           </FadeIn>
           <StaggeredFadeIn
             direction="up"

@@ -17,7 +17,7 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
-          customBadgeStyle: "flex border-none items-center justify-center pt-[8px] pb-[6.5px] px-[16px] bg-[#FFFFFF1A] rounded-[100px] font-[400] text-[13px]  xs:text-[16px] sm:text-[16px] lg:text-[12px] 2xl:text-[16px] leading-[100%]"
+          customBadgeStyle: "flex border-none items-center justify-center pt-[8px] pb-[6.5px] px-[16px] bg-[#FFFFFF1A] rounded-[100px] font-[400] text-[13px] xs:text-[16px] sm:text-[16px] lg:text-[12px] 2xl:text-[16px] leading-[100%]"
       },
     },
     defaultVariants: {

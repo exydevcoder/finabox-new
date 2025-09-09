@@ -13,7 +13,7 @@ import TopAgentSection from './TopAgentSection';
 
 export default function HeroSection() {
   return (
-    <section className="px-8 w-full flex flex-col items-center gap-6 sm:gap-16 md:gap-32 justify-center mt-[150px] md:mt-[180px] pb-[80px] 2xl:mt-[132px]">
+    <section className="px-5 sm:px-8 w-full flex flex-col items-center gap-6 sm:gap-16 md:gap-32 justify-center mt-[150px] md:mt-[180px] pb-[80px] 2xl:mt-[132px]">
       <div className="container relative flex flex-col md:flex-row items-center gap-5">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col items-center sm:items-start gap-6 w-full">

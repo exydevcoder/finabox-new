@@ -6,14 +6,14 @@ import StateCardsCarousel from './StateCardsCarousel';
 
 export default function ChooseYourStateSection() {
   return (
-    <section className="px-8 w-full flex items-center justify-center py-[96px]">
-      <div className="container flex flex-col p-0 sm:p-6 gap-8">
-        <FadeIn direction="up" delay={0.2} duration={0.8} className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex flex-col text-center md:text-left gap-2">
+    <section className="px-5 sm:px-8 w-full flex items-center justify-center py-[96px]">
+      <div className="container flex flex-col gap-8">
+        <FadeIn direction="up" delay={0.2} duration={0.8} className="flex flex-col md:flex-row gap-6 items-center justify-between">
+          <div className="flex flex-col text-center justify-center md:text-left gap-2">
             <FadeIn direction="left" delay={0.4} duration={0.6}>
               <h1 className="text-white text-4xl font-semibold leading-10">Choose Your State</h1>
             </FadeIn>
-            <FadeIn direction="left" delay={0.6} duration={0.6}>
+            <FadeIn direction="left" delay={0.6} duration={0.6} className='w-full xs:w-[294px] sm:w-full mx-auto'>
               <p className="text-white/70 text-base font-normal leading-normal">36 states + FCT. 100 slots each. Secure your position early.</p>
             </FadeIn>
           </div>

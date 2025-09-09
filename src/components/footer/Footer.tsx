@@ -47,8 +47,8 @@ export default function Footer() {
   };
 
   return (
-    <FadeIn direction="up" distance={40} duration={0.8} className="footerBgImg px-8 py-[85px] flex items-center justify-center w-full">
-      <div className="container p-[32px] gap-[64px] bg-[#111111] border border-white/8 rounded-[32px]">
+    <FadeIn direction="up" distance={40} duration={0.8} className="footerBgImg px-5 sm:px-8 py-[85px] flex items-center justify-center w-full">
+      <div className="container p-6 xs:p-[32px] gap-[64px] bg-[#111111] border border-white/8 rounded-[32px]">
         <div className="flex flex-col lg:flex-row justify-between pb-6 gap-16">
           {/* Logo and Social */}
           <FadeIn direction="right" delay={0.2} duration={0.6} className="w-full lg:w-[232px] flex flex-col gap-4">
