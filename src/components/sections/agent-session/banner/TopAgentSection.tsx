@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import topAgentImg from '../../../assets/topagent.png';
-import topAgentMobileImg from '../../../assets/topagent-mobile.png';
-import topAgentIcon from '../../../assets/icons/top-agent-icon.svg';
-import FadeIn from '../../animations/fade-in';
-import StaggeredFadeIn from '../../animations/StaggeredFadeIn';
-import HoverCard from '../../animations/hover-card';
+import topAgentImg from '../../../../assets/topagent.png';
+import topAgentMobileImg from '../../../../assets/topagent-mobile.png';
+import topAgentIcon from '../../../../assets/icons/top-agent-icon.svg';
+import StaggeredFadeIn from '@/components/animations/StaggeredFadeIn';
+import HoverCard from '@/components/animations/hover-card';
+import FadeIn from '@/components/animations/fade-in';
 
 export default function TopAgentSection() {
   return (
-    <div className="container flex flex-col-reverse md:flex-row items-center gap-8">
+    <div className="container2 flex flex-col-reverse md:flex-row items-center gap-8">
       <FadeIn
         direction="left"
         delay={0.2}

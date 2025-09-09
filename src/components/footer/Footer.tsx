@@ -16,7 +16,6 @@ import PlayStoreIcon from '@/assets/icons/play-store.svg';
 import AppleStoreIcon from '@/assets/icons/apple-store.svg';
 import StaggeredFadeIn from '../animations/StaggeredFadeIn';
 import { scrollToTop } from '../scrollToTop';
-import { scrollToSection } from '@/lib/scrollTo';
 
 export default function Footer() {
   const socialIcons = [
@@ -26,17 +25,18 @@ export default function Footer() {
     { name: 'YouTube', icon: FaYoutube, url: '#' }
   ];
 
-  const quickLinks = ['Home', 'Features', 'Pricing', 'Agent'];
-  const otherLinks = ['Contact', 'Terms & Conditions'];
+  const quickLinks = [
+    { label: 'Home', target: '/' },
+    { label: 'Features', target: '/#features' },
+    { label: 'Pricing', target: '/#pricing' },
+    { label: 'Agent', target: '/agent' }
+  ];
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    scrollToSection(targetId);
-  };
+  const otherLinks = ['Contact', 'Terms & Conditions'];
 
   return (
     <FadeIn direction="up" distance={40} duration={0.8} className="footerBgImg px-5 sm:px-8 py-[85px] flex items-center justify-center w-full">
-      <div className="container p-6 xs:p-[32px] gap-[64px] bg-[#111111] border border-white/8 rounded-[32px]">
+      <div className="container p-[32px] gap-[64px] bg-[#111111] border border-white/8 rounded-[32px]">
         <div className="flex flex-col lg:flex-row justify-between pb-6 gap-16">
           {/* Logo and Social */}
           <FadeIn direction="right" delay={0.2} duration={0.6} className="w-full lg:w-[232px] flex flex-col gap-4">
@@ -75,18 +75,15 @@ export default function Footer() {
             <div className="w-full lg:w-[109px] flex flex-col gap-8">
               <h4 className="text-white text-base font-medium hover:text-white/70 transition-colors duration-300">Quick Links</h4>
               <div className="flex flex-col gap-5">
-                {quickLinks.map((link, index) => {
-                  const targetId = link === 'Home' ? 'home' : slugify(link);
-                  return (
-                    <li key={index} className="list-none">
-                      <FadeIn direction="down" delay={0.3 + index * 0.1} duration={0.4}>
-                        <Link href={`#${targetId}`} onClick={e => handleScroll(e, targetId)} className="text-white/50 text-base font-normal hover:text-white/70 transition-colors duration-300">
-                          {link}
-                        </Link>
-                      </FadeIn>
-                    </li>
-                  );
-                })}
+                {quickLinks.map((link, index) => (
+                  <li key={index} className="list-none">
+                    <FadeIn direction="down" delay={0.3 + index * 0.1} duration={0.4}>
+                      <Link href={link.target} className="text-white/50 text-base font-normal hover:text-white/70 transition-colors duration-300">
+                        {link.label}
+                      </Link>
+                    </FadeIn>
+                  </li>
+                ))}
               </div>
             </div>
 

@@ -1,13 +1,13 @@
-import HoverCard from '../../animations/hover-card';
-import StaggeredFadeIn from '../../animations/StaggeredFadeIn';
-import FadeIn from '../../animations/fade-in';
-import { Badge } from '../../ui/badge';
+import HoverCard from '@/components/animations/hover-card';
+import StaggeredFadeIn from '@/components/animations/StaggeredFadeIn';
+import FadeIn from '@/components/animations/fade-in';
+import { Badge } from '@/components/ui/badge';
 import StateCardsCarousel from './StateCardsCarousel';
 
 export default function ChooseYourStateSection() {
   return (
-    <section className="px-5 sm:px-8 w-full flex items-center justify-center py-[96px]">
-      <div className="container flex flex-col gap-8">
+    <section className="px-5 xs:px-8 w-full flex items-center justify-center py-[96px]">
+      <div className="container2 flex flex-col gap-8">
         <FadeIn direction="up" delay={0.2} duration={0.8} className="flex flex-col md:flex-row gap-6 items-center justify-between">
           <div className="flex flex-col text-center justify-center md:text-left gap-2">
             <FadeIn direction="left" delay={0.4} duration={0.6}>

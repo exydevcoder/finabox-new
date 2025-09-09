@@ -1,8 +1,12 @@
-import HeroSection from '@/components/sections/banner/HeroSection';
-import ChooseYourStateSection from '@/components/sections/chooseyourstate/ChooseYourStateSection';
-import ContactSection from '@/components/sections/contact/ContactSection';
-import CoreAgentSection from '@/components/sections/CoreAgentSection';
-import FinaboxAgentSection from '@/components/sections/FinaboxAgentSection';
+import HeroSection from '@/components/sections/home-session/banner/hero-section';
+import FaqSection from '@/components/sections/home-session/faq/faq-section';
+import FeaturesSection from '@/components/sections/home-session/features/features-section';
+import MakeAlertSection from '@/components/sections/home-session/makealert/makealert-section';
+import PricingSection from '@/components/sections/home-session/pricing/pricing-section';
+import TestimonialsSection from '@/components/sections/home-session/testimonials/testimonials-section';
+import TrustedBySection from '@/components/sections/home-session/trustedby/trustedby-section';
+import WeBuildForSection from '@/components/sections/home-session/webuildfor/webuildfor-section';
+import WhyUsSection from '@/components/sections/home-session/whyus/whyus-section';
 
 export default function Home() {
   return (
@@ -10,18 +14,18 @@ export default function Home() {
       <div id="home">
         <HeroSection />
       </div>
-      <div className="">
-        <FinaboxAgentSection />
+      <TrustedBySection />
+      <div id="features" className="pt-10">
+        <FeaturesSection />
       </div>
-      <div className="">
-        <CoreAgentSection />
+      <WhyUsSection />
+      <WeBuildForSection />
+      <TestimonialsSection />
+      <div id="pricing" className="pt-10">
+        <PricingSection />
       </div>
-      <div className="">
-        <ChooseYourStateSection />
-      </div>
-      <div id="contact" className="scroll-mt-32 sm:scroll-mt-5">
-        <ContactSection />
-      </div>
+      <FaqSection />
+      <MakeAlertSection />
     </>
   );
 }

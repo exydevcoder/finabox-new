@@ -68,8 +68,8 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="px-5 sm:px-8 w-full flex items-center justify-center pb-0 sm:pb-[96px] pt-0 sm:pt-[96px]">
-      <div className="container">
+    <section className="px-5 xs:px-8 w-full flex items-center justify-center pb-0 sm:pb-[96px] pt-0 sm:pt-[96px]">
+      <div className="container2">
         <div className="max-w-[592px] mx-auto">
           <div className="flex flex-col items-center justify-center gap-6 w-full">
             <FadeIn direction="up" delay={0.2} distance={40} duration={0.8}>

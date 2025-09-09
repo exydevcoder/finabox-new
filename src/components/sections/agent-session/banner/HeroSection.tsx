@@ -4,8 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import FadeIn from '@/components/animations/fade-in';
 import StaggeredFadeIn from '@/components/animations/StaggeredFadeIn';
-import nccImg from '../../../assets/ncc.png';
-import ndpaImg from '../../../assets/ndpa.png';
+import nccImg from '../../../../assets/ncc.png';
+import ndpaImg from '../../../../assets/ndpa.png';
 import { Badge } from '@/components/ui/badge';
 import HoverCard from '@/components/animations/hover-card';
 import { Button } from '@/components/ui/button';
@@ -15,15 +15,15 @@ import { scrollToSection } from '@/lib/scrollTo';
 
 export default function HeroSection() {
   return (
-    <section className="px-5 sm:px-8 w-full flex flex-col items-center gap-6 sm:gap-16 md:gap-32 justify-center mt-[150px] md:mt-[180px] pb-[80px] 2xl:mt-[132px]">
-      <div className="container relative flex flex-col md:flex-row items-center gap-5">
+    <section className="px-5 xs:px-8 w-full flex flex-col items-center gap-6 sm:gap-16 md:gap-32 justify-center mt-[150px] md:mt-[180px] pb-[80px] 2xl:mt-[132px]">
+      <div className="container2 relative flex flex-col md:flex-row items-center gap-5">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col items-center sm:items-start gap-6 w-full">
             <FadeIn direction="up" delay={0.2} distance={40} duration={0.8}>
               <Badge variant="customBadgeStyle">New Program 2025</Badge>
             </FadeIn>
             <FadeIn direction="up" delay={0.3} distance={40} duration={0.8}>
-              <h1 className="titleStyle text-center sm:text-left w-full md:w-[600px]">
+              <h1 className="titleStyle2 text-center sm:text-left w-full md:w-[600px]">
                 Become a Certified
                 <span className="gradientTextColor"> Finabox</span> Agent
               </h1>
@@ -33,15 +33,15 @@ export default function HeroSection() {
                 Redefine financial communication in your state and earn commissions while making banking more secure.
               </p>
             </FadeIn>
-            <FadeIn direction="left" delay={0.5} duration={0.6} className="flex flex-col sm:flex-row gap-3">
-              <HoverCard hoverScale={1.03} hoverElevation>
-                <Button variant="customWithGradient" className="gap-3 transition-all duration-300 hover:shadow-[0_0_15px_rgba(137,33,255,0.3)]" onClick={() => scrollToSection('contact')}>
+            <FadeIn direction="left" delay={0.5} duration={0.6} className="w-full md:w-[441px] flex flex-col sm:flex-row gap-3">
+              <HoverCard hoverScale={1.03} hoverElevation className="w-full">
+                <Button variant="customWithGradient" className="gap-3 w-full" onClick={() => scrollToSection('contact')}>
                   Join Now
                 </Button>
               </HoverCard>
-              <HoverCard hoverScale={1.03} hoverElevation>
+              <HoverCard hoverScale={1.03} hoverElevation className="w-full">
                 <a href={BOOK_MEETING_URL} target="_blank" rel="noopener noreferrer">
-                  <Button variant="customWithGradient" className="bg-white text-black gap-3 hover:bg-gray-100 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                  <Button variant="customWithGradient" className="w-full bg-white text-black gap-3 hover:bg-gray-100 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                     Book a Meeting
                   </Button>
                 </a>

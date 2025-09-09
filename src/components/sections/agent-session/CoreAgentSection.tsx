@@ -1,23 +1,23 @@
 "use client"
 
 import Image from 'next/image';
-import ambassadorsIcon from '../../assets/core-agent/ambassadors.svg';
-import customersIcon from '../../assets/core-agent/customers.svg';
-import educateIcon from '../../assets/core-agent/educate.svg';
-import supportIcon from '../../assets/core-agent/support.svg';
+import ambassadorsIcon from '../../../assets/core-agent/ambassadors.svg';
+import customersIcon from '../../../assets/core-agent/customers.svg';
+import educateIcon from '../../../assets/core-agent/educate.svg';
+import supportIcon from '../../../assets/core-agent/support.svg';
 
-import certIcon from '../../assets/core-agent/cert.svg';
-import exclusiveIcon from '../../assets/core-agent/exclusive.svg';
-import earningsIcon from '../../assets/core-agent/earnings.svg';
-import toolsIcon from '../../assets/core-agent/tools.svg';
-import premiumIcon from '../../assets/core-agent/premium.svg';
+import certIcon from '../../../assets/core-agent/cert.svg';
+import exclusiveIcon from '../../../assets/core-agent/exclusive.svg';
+import earningsIcon from '../../../assets/core-agent/earnings.svg';
+import toolsIcon from '../../../assets/core-agent/tools.svg';
+import premiumIcon from '../../../assets/core-agent/premium.svg';
 
-import governanceIcon from '../../assets/core-agent/governance.svg';
+import governanceIcon from '../../../assets/core-agent/governance.svg';
 
-import HoverCard from '../animations/hover-card';
-import StaggeredFadeIn from '../animations/StaggeredFadeIn';
-import FadeIn from '../animations/fade-in';
-import { Button } from '../ui/button';
+import HoverCard from '../../animations/hover-card';
+import StaggeredFadeIn from '../../animations/StaggeredFadeIn';
+import FadeIn from '../../animations/fade-in';
+import { Button } from '../../ui/button';
 import { scrollToSection } from '@/lib/scrollTo';
 
 export default function CoreAgentSection() {
@@ -73,18 +73,18 @@ export default function CoreAgentSection() {
   ];
 
   return (
-    <section className="px-5 sm:px-8 w-full flex items-center justify-center pb-[40px] sm:pb-[80px]">
-      <div className="container flex flex-col gap-10">
-        <div className="w-full flex flex-col gap-3 px-0 sm:px-6 pt-24">
+    <section className="px-5 xs:px-8 w-full flex items-center justify-center pb-[40px] sm:pb-[80px]">
+      <div className="container2 flex flex-col gap-10">
+        <div className="w-full flex flex-col gap-3 px-0 2xl:px-6 pt-24">
           <FadeIn direction="up" delay={0.3} distance={40} duration={0.8}>
-            <h1 className="titleStyle w-[300px] sm:w-full">
+            <h1 className="titleStyle2 w-[300px] sm:w-full">
               Core<span className="gradientTextColor"> Responsibilities</span>
             </h1>
           </FadeIn>
           <FadeIn direction="up" delay={0.4} distance={40} duration={0.8}>
             <p className="w-full xs:w-[344px] sm:w-full text-base sm:text-[22px] text-[#FFFFFF80] font-normal">Operate with clarity, integrity, and measurable impact across your state.</p>
           </FadeIn>
-          <StaggeredFadeIn direction="up" staggerDelay={0.15} initialDelay={0.4} duration={0.7} distance={30} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-7">
+          <StaggeredFadeIn direction="up" staggerDelay={0.15} initialDelay={0.4} duration={0.7} distance={30} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-6 pt-7">
             {CoreRespData.map((item, i) => (
               <HoverCard
                 hoverScale={1.02}
@@ -104,9 +104,9 @@ export default function CoreAgentSection() {
           </StaggeredFadeIn>
         </div>
 
-        <div className="w-full flex flex-col gap-3 px-0 sm:px-6 py-8 sm:py-24">
+        <div className="w-full flex flex-col gap-3 px-0 2xl:px-6 py-8 sm:py-24">
           <FadeIn direction="up" delay={0.3} distance={40} duration={0.8}>
-            <h1 className="titleStyle">
+            <h1 className="titleStyle2">
               Agent<span className="gradientTextColor"> Benefits</span>
             </h1>
           </FadeIn>
@@ -119,7 +119,7 @@ export default function CoreAgentSection() {
             initialDelay={0.4}
             duration={0.7}
             distance={30}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 pt-7"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 2xl:gap-6 pt-7"
           >
             {AgentBenefitData.map((item, i) => (
               <HoverCard
@@ -151,7 +151,7 @@ export default function CoreAgentSection() {
                 <Image width={48} height={48} src={governanceIcon} alt="governanceIcon" className="transition-transform duration-500" />
               </HoverCard>
             </div>
-            <div className="flex flex-col items-center sm:items-start gap-2 w-full lg:w-[700px]">
+            <div className="flex flex-col items-center sm:items-start gap-2 w-full xl:w-[600px] 2xl:w-[700px]">
               <h3 className="text-white text-center sm:text-left text-xl sm:text-2xl font-semibold leading-7 sm:leading-8">Governance</h3>
               <p className="w-full xs:w-[326px] sm:w-full text-white/80 text-center sm:text-left text-sm sm:text-base font-normal leading-6">
                 Agents follow a strict code of conduct, pay ₦20,000 annual license fee, and must renew annually based on compliance.
