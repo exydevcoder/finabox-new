@@ -7,7 +7,7 @@ import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { FaXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
-import { slugify } from '@/lib/slugify';
+// import { slugify } from '@/lib/slugify';
 import Image from 'next/image';
 import FadeIn from '../animations/fade-in';
 import footerLogo from '../../assets/logo.png';
@@ -32,7 +32,12 @@ export default function Footer() {
     { label: 'Agent', target: '/agent' }
   ];
 
-  const otherLinks = ['Contact', 'Terms & Conditions'];
+  const otherLinks = [
+    { label: 'Contact', target: '/#contact' },
+    { label: 'Terms & Conditions', target: '#' }
+  ];
+
+  // const otherLinks = ['Contact', 'Terms & Conditions'];
 
   return (
     <FadeIn direction="up" distance={40} duration={0.8} className="footerBgImg px-5 sm:px-8 py-[85px] flex items-center justify-center w-full">
@@ -92,9 +97,9 @@ export default function Footer() {
               <h4 className="text-white text-base font-medium hover:text-white/70 transition-colors duration-300">Others</h4>
               <div className="flex flex-col gap-5">
                 {otherLinks.map((link, index) => (
-                  <FadeIn key={link} direction="right" delay={0.6 + index * 0.1} duration={0.4}>
-                    <Link href={`/${slugify(link)}`} className="text-white/50 text-base font-normal hover:text-white/70 transition-colors duration-300">
-                      {link}
+                  <FadeIn key={index} direction="right" delay={0.6 + index * 0.1} duration={0.4}>
+                    <Link href={link.target} className="text-white/50 text-base font-normal hover:text-white/70 transition-colors duration-300">
+                      {link.label}
                     </Link>
                   </FadeIn>
                 ))}
