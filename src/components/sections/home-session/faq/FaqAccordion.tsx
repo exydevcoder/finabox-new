@@ -73,7 +73,7 @@ export default function FaqAccordion() {
           </FadeIn>
         ))}
 
-        <div className="mt-[32px] flex items-center justify-center scroll-mt-32" id="contact">
+        <div className="mt-[32px] flex items-center justify-center scroll-mt-48" id="contact">
           <Link href="#" className='group flex items-center gap-2 text-white hover:text-white/80 transition-colors duration-300'>
             <Image src={moreQuestionIcon} alt="more question" width={48} height={48} className="w-[48px] h-[48px]" />
             <span className='text-white text-base font-medium group-hover:text-white/70'> More questions?</span>
